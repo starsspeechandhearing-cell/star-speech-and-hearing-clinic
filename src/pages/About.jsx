@@ -1,11 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import {
-  Award, ShieldCheck, Heart, Smile, Target, Eye,
-  HeartHandshake, Sparkles, MessageSquare, Ear,
-  Activity, BookOpen, Baby, GraduationCap,
-  Briefcase, Users, Brain, MapPin, Zap, Utensils,
-  CheckCircle, Mic
+  Award, ShieldCheck, Heart, Smile, MessageSquare, Ear,
+  Activity, BookOpen, Baby, GraduationCap, Briefcase, Users,
+  Utensils, CheckCircle, Mic
 } from 'lucide-react';
 import annithaProfileImg from '../assets/WhatsAppImage2026-07-07at2.43.50PM.jpeg';
 
@@ -175,6 +174,11 @@ const expertiseList = [
 export const About = () => {
   return (
     <div className="bg-[#F8FCFF] text-slate-800">
+      <Helmet>
+        <title>About Annitha G | Founder &amp; Speech Pathologist | Stars Clinic</title>
+        <meta name="description" content="Meet Annitha G, certified Speech-Language Pathologist (BASLP, MSc SLP) and Founder of Stars Speech and Hearing Clinic in Coimbatore. Learn about her professional journey." />
+        <link rel="canonical" href="https://starsspeechhearing.com/about" />
+      </Helmet>
 
       {/* ──────────────────────────────────────────────────────────── */}
       {/* SECTION 1 – ABOUT US                                        */}

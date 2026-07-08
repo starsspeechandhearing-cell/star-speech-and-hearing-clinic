@@ -101,15 +101,14 @@ export const Navbar = () => {
 
           {/* Desktop Book CTA */}
           <div className="hidden lg:block">
-            <a 
-              href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%2520and%2520Hearing%2520Clinic,%20I%20would%20like%20to%2520schedule%20an%20appointment." 
-              target="_blank" 
+            <Button
+              variant="teal"
+              href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%2520and%2520Hearing%2520Clinic,%20I%20would%20like%20to%2520schedule%20an%20appointment."
+              target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="teal">
-                WhatsApp Book Appointment
-              </Button>
-            </a>
+              WhatsApp Book Appointment
+            </Button>
           </div>
 
           {/* Mobile Menu Icon */}
@@ -151,17 +150,16 @@ export const Navbar = () => {
                   );
                 })}
                 <div className="pt-2 border-t border-slate-100">
-                  <a 
-                    href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%2520and%2520Hearing%2520Clinic,%20I%20would%20like%20to%2520schedule%20an%20appointment." 
-                    target="_blank" 
+                  <Button
+                    variant="teal"
+                    className="w-full justify-center text-center"
+                    href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%2520and%2520Hearing%2520Clinic,%20I%20would%20like%20to%2520schedule%20an%20appointment."
+                    target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsOpen(false)}
-                    className="block w-full"
                   >
-                    <Button variant="teal" className="w-full justify-center text-center">
-                      WhatsApp Book Appointment
-                    </Button>
-                  </a>
+                    WhatsApp Book Appointment
+                  </Button>
                 </div>
               </div>
             </motion.div>

@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
-export const Button = ({ children, onClick, type = 'button', variant = 'primary', className = '', ...props }) => {
+export const Button = ({ children, onClick, type = 'button', variant = 'primary', className = '', to, href, ...props }) => {
   const baseStyles = 'inline-flex items-center justify-center font-poppins font-semibold text-sm transition-all duration-300 rounded-custom px-6 py-3.5 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer';
   
   const variants = {
@@ -12,16 +13,19 @@ export const Button = ({ children, onClick, type = 'button', variant = 'primary'
     white: 'bg-white text-primary hover:bg-primary hover:text-white shadow-sm hover:shadow focus:ring-primary',
   };
 
+  const Component = href ? motion.a : (to ? motion(Link) : motion.button);
+  const componentProps = href 
+    ? { href, ...props } 
+    : (to ? { to, ...props } : { type, onClick, ...props });
+
   return (
-    <motion.button
-      type={type}
-      onClick={onClick}
+    <Component
       className={`${baseStyles} ${variants[variant]} ${className}`}
       whileHover={{ y: -2, scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      {...props}
+      {...componentProps}
     >
       {children}
-    </motion.button>
+    </Component>
   );
 };

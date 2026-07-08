@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { AlertCircle, Home, ArrowLeft } from 'lucide-react';
 import { Button } from '../components/Buttons/Button';
@@ -23,22 +22,16 @@ export const NotFound = () => {
             The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
           </p>
         </div>
-
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-          <Link to="/">
-            <Button variant="primary" className="w-full flex items-center">
-              <Home className="w-4 h-4 mr-2" />
-              Back to Home
-            </Button>
-          </Link>
-          <Link to="/services">
-            <Button variant="outline" className="w-full flex items-center">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Explore Services
-            </Button>
-          </Link>
-        </div>
-      </div>
+          <Button to="/" variant="primary" className="w-full flex items-center">
+            <Home className="w-4 h-4 mr-2" />
+            Back to Home
+          </Button>
+          <Button to="/services" variant="outline" className="w-full flex items-center">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Explore Services
+          </Button>
+        </div>      </div>
     </div>
   );
 };

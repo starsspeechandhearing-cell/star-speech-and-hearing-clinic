@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { 
   Phone, Mail, MapPin, Clock, Send, ShieldCheck, 
-  Heart, Smile, Award, Info, HelpCircle, CheckCircle2 
+  Heart, Smile, Award, CheckCircle2 
 } from 'lucide-react';
 import { Button } from '../components/Buttons/Button';
 import { FAQAccordion } from '../components/FAQ/FAQ';
@@ -112,6 +113,11 @@ export const Contact = () => {
 
   return (
     <div className="overflow-hidden bg-[#F8FCFF] text-slate-800">
+      <Helmet>
+        <title>Contact Us | Stars Speech and Hearing Clinic Coimbatore</title>
+        <meta name="description" content="Get in touch with Stars Speech and Hearing Clinic in Sivananda Colony, Coimbatore. Book an appointment or consult on speech therapy, hearing aids, and occupational therapy." />
+        <link rel="canonical" href="https://starsspeechhearing.com/contact" />
+      </Helmet>
       
       {/* ──────────────────────────────────────────────────────────── */}
       {/* SECTION 1 – CONTACT US (INTRO)                              */}

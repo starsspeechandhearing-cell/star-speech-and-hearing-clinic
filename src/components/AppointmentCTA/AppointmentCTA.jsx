@@ -9,7 +9,7 @@ export const AppointmentCTA = () => {
   const [loading, setLoading] = useState(false);
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = (_data) => {
     setLoading(true);
     // Simulate API post
     setTimeout(() => {

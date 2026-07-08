@@ -1,8 +1,7 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ChevronRight, ArrowRight, ShieldCheck, Heart, Info, ClipboardList, HelpCircle } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { ChevronRight, ShieldCheck, Heart, Info, ClipboardList, HelpCircle } from 'lucide-react';
 import { servicesData } from '../data/servicesData';
 import { FAQAccordion } from '../components/FAQ/FAQ';
 import { AppointmentCTA } from '../components/AppointmentCTA/AppointmentCTA';

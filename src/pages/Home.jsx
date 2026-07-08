@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { 
-  Shield, Award, Heart, Brain, Star, MapPin, Phone, Mail, Clock, Send,
+  Shield, Award, Brain, Star, MapPin,
   MessageSquare, BookOpen, Activity, Ear, Baby, GraduationCap, Zap, Mic, Utensils, Users, CheckCircle
 } from 'lucide-react';
-import { Button } from '../components/Buttons/Button';
 import specialEducationImg from '../assets/special eduction.png';
 import occupationalTherapyImg from '../assets/Screenshot 2026-07-07 122109.png';
 import childDevelopmentImg from '../assets/WhatsApp Image 2026-07-03 at 11.55.10 AM (1).jpeg';
@@ -97,23 +97,27 @@ const specializations = [
 // Section 7: Student Achievements Data
 const achievements = [
   {
-    title: "Speech & Fluency Milestone",
-    story: "Aarav joined with severe expressive speech delay. Within 6 months of speech therapy, he progressed from single words to speaking full sentences with clear articulation.",
+    title: "A journey to clear speech",
+    story: "Santhosh started therapy with limited speech and difficulty producing certain sounds. After six months of consistent speech therapy, he is now able to speak in complete sentences, narrate classroom experiences, and communicate with clear pronunciation. We are proud of his wonderful progress!",
     highlight: "Graduated to mainstream schooling",
     tagColor: "bg-blue-100 text-blue-800",
     image: achievement1Img
   },
   {
-    title: "Sensory Integration Progress",
-    story: "Riya struggled with sensory overload and fine motor tasks. Occupational therapy swings and play routines helped improve her balance and handwriting significantly.",
-    highlight: "Completed independent writing tasks",
+    title: "Building social communication skills",
+    story: `Krish started therapy at 3.5 years with echolalia and challenges in social communication. After 10 months of consistent therapy, he has shown remarkable improvement. His echolalia has reduced, and he is now able to understand questions, respond appropriately, and communicate his thoughts meaningfully.
+
+We are delighted to celebrate Krish’s successful completion of therapy and his happy discharge. We wish him continued growth, confidence, and success in his communication journey.`,
+    highlight: "Successfully completed therapy & discharged",
     tagColor: "bg-purple-100 text-purple-800",
     image: achievement2Img
   },
   {
-    title: "Autism Communication Breakthrough",
-    story: "Kabir used minimal eye contact and experienced frequent meltdowns. Parent-coached training combined with PECS and play therapy helped him communicate his daily needs calmly.",
-    highlight: "Reduced sensory meltdowns by 80%",
+    title: "Hearing Milestones, Winning Moments",
+    story: `Our young stars showcased their confidence and communication skills at the Children’s Day Competition and Talent Show. With great enthusiasm and dedication, our children secured first place in listening games, storytelling, and singing competitions.
+
+These achievements reflect their growing listening abilities, speech and language skills, creativity, and self-confidence. We are proud of their wonderful progress and celebrate every milestone in their journey.`,
+    highlight: "First place in Children's Day events",
     tagColor: "bg-teal-100 text-teal-800",
     image: achievement3Img
   }
@@ -236,6 +240,11 @@ export const Home = () => {
 
   return (
     <div className="bg-[#F8FCFF] text-slate-800">
+      <Helmet>
+        <title>Stars Speech and Hearing Clinic | Speech Therapy & Audiology Coimbatore</title>
+        <meta name="description" content="Stars Speech and Hearing Clinic in Coimbatore offers certified Speech Therapy, Audiology, Occupational Therapy, and Special Education under expert clinical directors." />
+        <link rel="canonical" href="https://starsspeechhearing.com/" />
+      </Helmet>
       
       {/* SECTION 1 – WELCOME */}
       <section className="pt-8 pb-16 px-6 max-w-5xl mx-auto text-center flex flex-col items-center justify-center">
@@ -525,7 +534,7 @@ export const Home = () => {
                     <h3 className="font-poppins font-bold text-slate-900 text-lg leading-snug">
                       {item.title}
                     </h3>
-                    <p className="font-inter text-slate-500 text-sm leading-relaxed">
+                    <p className="font-inter text-slate-500 text-sm leading-relaxed whitespace-pre-line">
                       "{item.story}"
                     </p>
                   </div>

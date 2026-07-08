@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import {
   MessageSquare, Ear, Cpu, Headphones, Activity, BookOpen, PenTool, Baby,
   GraduationCap, Mic, Volume2, MessageCircle, Utensils, Brain, Heart,
@@ -263,6 +264,11 @@ const therapySteps = [
 export const Services = () => {
   return (
     <div className="overflow-hidden">
+      <Helmet>
+        <title>Therapy Services &amp; Audiology | Stars Clinic Coimbatore</title>
+        <meta name="description" content="Explore 20+ expert clinical services in Coimbatore including Speech Therapy, Hearing Aid trials, CI Mapping, Occupational Therapy, Special Education, and ADHD support." />
+        <link rel="canonical" href="https://starsspeechhearing.com/services" />
+      </Helmet>
 
       {/* ──────────────────────────────────────────────────────────── */}
       {/* SECTION 1 – SERVICES INTRO                                  */}

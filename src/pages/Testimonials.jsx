@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
-import { Star, CheckCircle2, MessageSquare, Quote, Heart, StarHalf } from 'lucide-react';
+import { Star, Quote, CheckCircle2 } from 'lucide-react';
 import { Button } from '../components/Buttons/Button';
 
 const patientStories = [

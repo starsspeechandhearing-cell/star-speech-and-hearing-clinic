@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
-import { Star, CheckCircle, Volume2, ShieldAlert, Cpu, Heart, CheckCircle2 } from 'lucide-react';
+import { CheckCircle, Cpu, CheckCircle2 } from 'lucide-react';
 import { Button } from '../components/Buttons/Button';
 
 const products = [
@@ -51,7 +51,7 @@ export const HearingAids = () => {
   const [loading, setLoading] = useState(false);
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = (_data) => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
