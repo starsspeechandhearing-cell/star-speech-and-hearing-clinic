@@ -7,6 +7,7 @@ import {
   Utensils, CheckCircle, Mic
 } from 'lucide-react';
 import annithaProfileImg from '../assets/WhatsAppImage2026-07-07at2.43.50PM.jpeg';
+import consultantImg from '../assets/WhatsApp Image 2026-07-08 at 11.47.44 AM.jpeg';
 
 // ─── Animation Variants (same as Homepage) ─────────────────────────
 const fadeInUp = {
@@ -183,7 +184,7 @@ export const About = () => {
               transition={{ duration: 0.6 }}
             >
               <span className="text-xs font-poppins font-black uppercase tracking-widest text-blue-600 bg-blue-50 px-4 py-2 rounded-full inline-block">
-                ABOUT US
+                FOUNDER
               </span>
             </motion.div>
 
@@ -193,7 +194,7 @@ export const About = () => {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-4xl sm:text-5xl font-poppins font-black text-slate-900 leading-tight"
             >
-              Meet Annitha G
+              I am Annitha G
             </motion.h1>
 
             <motion.h2
@@ -212,16 +213,13 @@ export const About = () => {
               className="space-y-5 font-inter text-slate-600 text-sm sm:text-base leading-relaxed"
             >
               <p>
-                Hello! I'm <strong className="text-slate-800">Annitha G</strong>, a <strong className="text-slate-800">Speech-Language Pathologist</strong> and the <strong className="text-slate-800">Founder of Stars Speech and Hearing Clinic, Coimbatore</strong>.
+                I am a <strong className="text-slate-800 font-bold">Speech-Language Pathologist</strong> and the Founder of <strong className="text-slate-800 font-bold">Stars Speech and Hearing Clinic, Coimbatore</strong>.
               </p>
               <p>
-                I completed my <strong className="text-slate-800">Bachelor of Audiology and Speech-Language Pathology (BASLP)</strong> from the <strong className="text-slate-800">All India Institute of Speech and Hearing (AIISH)</strong> and later pursued my <strong className="text-slate-800">Master of Science (MSc) in Speech-Language Pathology</strong>.
+                I completed my <strong className="text-slate-800 font-bold">BASLP</strong> from the <strong className="text-slate-800 font-bold">All India Institute of Speech and Hearing (AIISH)</strong> and later earned my <strong className="text-slate-800 font-bold">MSc in Speech-Language Pathology</strong>.
               </p>
               <p>
-                My clinical experience includes training at <strong className="text-slate-800">Narayana Health</strong> in adult communication disorders and swallowing rehabilitation, followed by professional experience at <strong className="text-slate-800">Ganga Hospital</strong>, where I worked with the <strong className="text-slate-800">Smile Train Initiative</strong>, providing care for individuals with cleft lip and palate. I also completed <strong className="text-slate-800">Oral Placement Therapy (OPT) Certification</strong> in 2024.
-              </p>
-              <p>
-                At <strong className="text-slate-800">Stars Speech and Hearing Clinic</strong>, I provide evidence-based assessment and personalized therapy for children and adults with speech, language, hearing, learning, and developmental challenges. I work closely with families and healthcare professionals to help every individual communicate with confidence and achieve their fullest potential.
+                With clinical experience at <strong className="text-slate-800 font-bold">Narayana Health</strong> and <strong className="text-slate-800 font-bold">Ganga Hospital's Smile Train Initiative</strong>, along with <strong className="text-slate-800 font-bold">Oral Placement Therapy (OPT) Certification (2024)</strong>, I specialize in evidence-based assessment and personalized therapy for children and adults with speech, language, hearing, learning, and developmental challenges.
               </p>
 
               {/* Professional expertise list */}
@@ -268,53 +266,89 @@ export const About = () => {
       </section>
 
       {/* ──────────────────────────────────────────────────────────── */}
-      {/* SECTION 2 – OUR VISION                                      */}
+      {/* SECTION 2 – OUR CONSULTANT                                  */}
       {/* ──────────────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-white border-y border-slate-100">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="text-center space-y-6"
-          >
-            <h2 className="text-3xl sm:text-4xl font-poppins font-black text-slate-900">
-              Our Vision
-            </h2>
-            <GradientDivider />
-            <p className="font-inter text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
-              To become a trusted center of excellence in speech, hearing, and developmental rehabilitation through innovation, compassion, and personalized care.
-            </p>
-          </motion.div>
+      <section className="py-24 px-6 bg-[#F8FCFF] border-b border-slate-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Left Side: Content */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeInUp}
+              className="lg:col-span-7 space-y-6 text-left"
+            >
+              <div className="space-y-3">
+                <span className="text-xs font-poppins font-black uppercase tracking-widest text-blue-600 bg-blue-50 px-4 py-1.5 rounded-full inline-block">
+                  OUR CONSULTANT
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-poppins font-black text-slate-900 leading-tight">
+                  Consultant Cochlear Implant Audiologist
+                </h2>
+                <h4 className="text-base sm:text-lg font-poppins font-semibold bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 bg-clip-text text-transparent">
+                  Advanced Hearing Care & Cochlear Implant Rehabilitation
+                </h4>
+              </div>
+
+              <div className="space-y-4 font-inter text-slate-600 text-sm sm:text-base leading-relaxed">
+                <p>
+                  I am a dedicated <strong className="text-slate-800 font-semibold">Consultant Cochlear Implant Audiologist</strong> specializing in hearing healthcare and auditory rehabilitation.
+                </p>
+                <p>
+                  I completed my <strong className="text-slate-800 font-semibold">BASLP</strong> and <strong className="text-slate-800 font-semibold">MASLP</strong> from <strong className="text-slate-800 font-semibold">MERF Institute of Speech and Hearing</strong>.
+                </p>
+                <p>
+                  My clinical experience includes <strong className="text-slate-800 font-semibold">Heartsprings Therapy Centre, Jakarta, Indonesia</strong>, and <strong className="text-slate-800 font-semibold">Ear Solutions Pvt. Ltd.</strong>, where I received the <strong className="text-slate-800 font-semibold">Star Performer Award</strong> for excellence in patient care.
+                </p>
+
+                <div className="space-y-2 pt-2">
+                  <p className="font-poppins font-bold text-slate-800">
+                    Currently serving as a Cochlear Implant Audiologist at MED-EL India, specializing in:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-2">
+                    {[
+                      "Cochlear Implant Candidacy Evaluation",
+                      "Cochlear Implant Mapping",
+                      "Auditory Rehabilitation",
+                      "Hearing Assessments",
+                      "Patient Counselling",
+                      "Long-Term Hearing Outcome Management"
+                    ].map((bullet, index) => (
+                      <div key={index} className="flex items-start space-x-3 text-slate-700">
+                        <CheckCircle className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                        <span className="font-poppins font-semibold text-sm leading-tight">{bullet}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Side: Image */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeInUp}
+              className="lg:col-span-5 w-full flex justify-center"
+            >
+              <div className="relative group w-full max-w-md rounded-[24px] overflow-hidden shadow-soft border-4 border-white bg-white hover-lift">
+                <img
+                  src={consultantImg}
+                  alt="Consultant Cochlear Implant Audiologist"
+                  className="w-full aspect-[4/5] object-cover object-top rounded-[20px]"
+                  loading="lazy"
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* ──────────────────────────────────────────────────────────── */}
-      {/* SECTION 3 – OUR MISSION                                     */}
-      {/* ──────────────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-[#F8FCFF]">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="text-center space-y-6"
-          >
-            <h2 className="text-3xl sm:text-4xl font-poppins font-black text-slate-900">
-              Our Mission
-            </h2>
-            <GradientDivider />
-            <p className="font-inter text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
-              Our mission is to provide compassionate, evidence-based speech, language, hearing, and developmental therapy that empowers children and adults to communicate with confidence and achieve their fullest potential.
-            </p>
-          </motion.div>
-        </div>
-      </section>
 
       {/* ──────────────────────────────────────────────────────────── */}
-      {/* SECTION 4 – OUR EXPERTISE                                   */}
+      {/* SECTION 3 – OUR EXPERTISE                                   */}
       {/* ──────────────────────────────────────────────────────────── */}
       <section className="py-24 px-6 bg-white border-y border-slate-100">
         <div className="max-w-7xl mx-auto">
@@ -364,7 +398,7 @@ export const About = () => {
       </section>
 
       {/* ──────────────────────────────────────────────────────────── */}
-      {/* SECTION 5 – PROFESSIONAL JOURNEY                            */}
+      {/* SECTION 4 – PROFESSIONAL JOURNEY                            */}
       {/* ──────────────────────────────────────────────────────────── */}
       <section className="py-24 px-6 bg-[#F8FCFF]">
         <div className="max-w-4xl mx-auto">
@@ -424,7 +458,7 @@ export const About = () => {
       </section>
 
       {/* ──────────────────────────────────────────────────────────── */}
-      {/* SECTION 6 – WHY CHOOSE US                                   */}
+      {/* SECTION 5 – WHY CHOOSE US                                   */}
       {/* ──────────────────────────────────────────────────────────── */}
       <section className="py-24 px-6 bg-white border-t border-slate-100">
         <div className="max-w-7xl mx-auto">
