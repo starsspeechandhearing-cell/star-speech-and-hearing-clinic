@@ -1,11 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { AlertCircle, Home, ArrowLeft } from 'lucide-react';
 import { Button } from '../components/Buttons/Button';
 
 export const NotFound = () => {
   return (
     <div className="min-h-[80vh] flex items-center justify-center px-6 py-12">
+      <Helmet>
+        <title>404 - Page Not Found | Stars Speech and Hearing Clinic</title>
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <div className="max-w-md w-full text-center space-y-6">
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}

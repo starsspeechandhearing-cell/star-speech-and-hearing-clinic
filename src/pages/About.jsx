@@ -163,12 +163,79 @@ const expertiseList = [
 ];
 
 export const About = () => {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://starsspeechhearing.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://starsspeechhearing.in/about"
+      }
+    ]
+  };
+
+  const aboutPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Annitha G | Stars Speech and Hearing Clinic",
+    "description": "Meet Annitha G, Speech-Language Pathologist and Founder of Stars Speech and Hearing Clinic, providing evidence-based speech, language, hearing, and developmental therapy in Coimbatore.",
+    "url": "https://starsspeechhearing.in/about",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Annitha G",
+      "jobTitle": "Speech-Language Pathologist & Founder",
+      "worksFor": {
+        "@type": "MedicalClinic",
+        "name": "Stars Speech and Hearing Clinic",
+        "url": "https://starsspeechhearing.in",
+        "logo": "https://starsspeechhearing.in/images/logo.png",
+        "image": "https://starsspeechhearing.in/seo/home-banner.jpg"
+      }
+    }
+  };
+
   return (
     <div className="bg-[#F8FCFF] text-slate-800">
       <Helmet>
-        <title>About Annitha G | Founder &amp; Speech Pathologist | Stars Clinic</title>
-        <meta name="description" content="Meet Annitha G, certified Speech-Language Pathologist (BASLP, MSc SLP) and Founder of Stars Speech and Hearing Clinic in Coimbatore. Learn about her professional journey." />
-        <link rel="canonical" href="https://starsspeechhearing.com/about" />
+        <title>About Annitha G | Stars Speech and Hearing Clinic</title>
+        <meta name="description" content="Meet Annitha G, Speech-Language Pathologist and Founder of Stars Speech and Hearing Clinic, providing evidence-based speech, language, hearing, and developmental therapy in Coimbatore." />
+        <meta name="keywords" content="Annitha G, Stars Speech and Hearing Clinic, Speech Therapist Coimbatore, Speech-Language Pathologist, Coimbatore, Speech and Hearing Clinic" />
+        <link rel="canonical" href="https://starsspeechhearing.in/about" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Stars Speech and Hearing Clinic" />
+        <meta name="theme-color" content="#0F4C81" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="About Annitha G | Stars Speech and Hearing Clinic" />
+        <meta property="og:description" content="Meet Annitha G, Speech-Language Pathologist and Founder of Stars Speech and Hearing Clinic, providing evidence-based speech, language, hearing, and developmental therapy in Coimbatore." />
+        <meta property="og:image" content="https://starsspeechhearing.in/seo/home-banner.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://starsspeechhearing.in/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Stars Speech and Hearing Clinic" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Annitha G | Stars Speech and Hearing Clinic" />
+        <meta name="twitter:description" content="Meet Annitha G, Speech-Language Pathologist and Founder of Stars Speech and Hearing Clinic, providing evidence-based speech, language, hearing, and developmental therapy in Coimbatore." />
+        <meta name="twitter:image" content="https://starsspeechhearing.in/seo/home-banner.jpg" />
+
+        {/* JSON-LD Schemas */}
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(aboutPageSchema)}
+        </script>
       </Helmet>
 
       {/* ──────────────────────────────────────────────────────────── */}
@@ -253,6 +320,7 @@ export const About = () => {
                   alt="Annitha G – Certified Speech Language Pathologist and Founder of Stars Speech and Hearing Clinic"
                   className="w-full h-auto object-cover"
                   loading="eager"
+                  decoding="async"
                 />
               </div>
               <div className="mt-6 bg-white border border-slate-100 rounded-[24px] p-6 shadow-soft text-center space-y-2">
@@ -339,6 +407,7 @@ export const About = () => {
                   alt="Consultant Cochlear Implant Audiologist"
                   className="w-full aspect-[4/5] object-cover object-top rounded-[20px]"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             </motion.div>

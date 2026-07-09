@@ -15,9 +15,10 @@ export const ServiceCard = ({ service }) => {
       <div className="relative overflow-hidden h-48 group">
         <img
           src={service.heroImage}
-          alt={service.title}
+          alt={`${service.title} - Stars Speech and Hearing Clinic`}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           loading="lazy"
+          decoding="async"
         />
         <div className="absolute top-4 left-4 bg-primary/95 backdrop-blur-xs text-white font-poppins text-[10px] uppercase tracking-wider font-bold px-3 py-1.5 rounded-full">
           {service.category}

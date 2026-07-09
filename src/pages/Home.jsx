@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -26,6 +27,7 @@ const specializations = [
     icon: MessageSquare,
     color: "from-blue-500/10 to-blue-500/20",
     iconColor: "text-blue-600",
+    slug: "speech-therapy"
   },
   {
     title: "Special Education",
@@ -33,6 +35,7 @@ const specializations = [
     icon: BookOpen,
     color: "from-purple-500/10 to-purple-500/20",
     iconColor: "text-purple-600",
+    slug: "special-education"
   },
   {
     title: "Occupational Therapy",
@@ -40,6 +43,7 @@ const specializations = [
     icon: Activity,
     color: "from-teal-500/10 to-teal-500/20",
     iconColor: "text-teal-600",
+    slug: "occupational-therapy"
   },
   {
     title: "Hearing Assessment & Rehab",
@@ -47,6 +51,7 @@ const specializations = [
     icon: Ear,
     color: "from-blue-500/10 to-blue-500/20",
     iconColor: "text-blue-600",
+    slug: "hearing-aid-fitting"
   },
   {
     title: "Early Intervention",
@@ -54,6 +59,7 @@ const specializations = [
     icon: Baby,
     color: "from-purple-500/10 to-purple-500/20",
     iconColor: "text-purple-600",
+    slug: "early-intervention"
   },
   {
     title: "Autism Spectrum Support",
@@ -61,6 +67,7 @@ const specializations = [
     icon: Brain,
     color: "from-teal-500/10 to-teal-500/20",
     iconColor: "text-teal-600",
+    slug: "autism-therapy"
   },
   {
     title: "Learning Disability Support",
@@ -68,6 +75,7 @@ const specializations = [
     icon: GraduationCap,
     color: "from-blue-500/10 to-blue-500/20",
     iconColor: "text-blue-600",
+    slug: "remedial-therapy"
   },
   {
     title: "ADHD Management",
@@ -75,6 +83,7 @@ const specializations = [
     icon: Zap,
     color: "from-purple-500/10 to-purple-500/20",
     iconColor: "text-purple-600",
+    slug: "adhd-therapy"
   },
   {
     title: "Stammering & Voice Therapy",
@@ -82,6 +91,7 @@ const specializations = [
     icon: Mic,
     color: "from-teal-500/10 to-teal-500/20",
     iconColor: "text-teal-600",
+    slug: "fluency-therapy"
   },
   {
     title: "Feeding & Oral Motor Therapy",
@@ -89,6 +99,7 @@ const specializations = [
     icon: Utensils,
     color: "from-blue-500/10 to-blue-500/20",
     iconColor: "text-blue-600",
+    slug: "swallowing-therapy"
   },
   {
     title: "Parent Guidance & Counseling",
@@ -96,6 +107,7 @@ const specializations = [
     icon: Users,
     color: "from-purple-500/10 to-purple-500/20",
     iconColor: "text-purple-600",
+    slug: "parent-training"
   }
 ];
 
@@ -217,12 +229,148 @@ export const Home = () => {
     visible: { transition: { staggerChildren: 0.1 } }
   };
 
+  const medicalClinicSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Stars Speech and Hearing Clinic",
+    "url": "https://starsspeechhearing.in",
+    "logo": "https://starsspeechhearing.in/images/logo.png",
+    "image": "https://starsspeechhearing.in/seo/home-banner.jpg",
+    "telephone": "+919080515327",
+    "email": "starsspeechandhearing@gmail.com",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "34/176- A, Raju Naidu St, Sivananda Colony, Tatabad",
+      "addressLocality": "Coimbatore",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "641012",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:30",
+        "closes": "21:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/share/1FC1nmmmos",
+      "https://www.instagram.com/starsspeechandhearing?igsh=MWlmY2toZWc2eGZjdQ==",
+      "https://youtube.com/@starsspeechandhearing?si=sXARO1bAKYvt8wmr"
+    ]
+  };
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Stars Speech and Hearing Clinic",
+    "url": "https://starsspeechhearing.in",
+    "logo": "https://starsspeechhearing.in/images/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/share/1FC1nmmmos",
+      "https://www.instagram.com/starsspeechandhearing?igsh=MWlmY2toZWc2eGZjdQ==",
+      "https://youtube.com/@starsspeechandhearing?si=sXARO1bAKYvt8wmr"
+    ]
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Stars Speech and Hearing Clinic",
+    "url": "https://starsspeechhearing.in",
+    "logo": "https://starsspeechhearing.in/images/logo.png",
+    "image": "https://starsspeechhearing.in/seo/home-banner.jpg",
+    "telephone": "+919080515327",
+    "email": "starsspeechandhearing@gmail.com",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "34/176- A, Raju Naidu St, Sivananda Colony, Tatabad",
+      "addressLocality": "Coimbatore",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "641012",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:30",
+        "closes": "21:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/share/1FC1nmmmos",
+      "https://www.instagram.com/starsspeechandhearing?igsh=MWlmY2toZWc2eGZjdQ==",
+      "https://youtube.com/@starsspeechandhearing?si=sXARO1bAKYvt8wmr"
+    ]
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Stars Speech and Hearing Clinic",
+    "url": "https://starsspeechhearing.in"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://starsspeechhearing.in/"
+      }
+    ]
+  };
+
   return (
     <div className="bg-[#F8FCFF] text-slate-800">
       <Helmet>
-        <title>Stars Speech and Hearing Clinic | Speech Therapy & Audiology Coimbatore</title>
-        <meta name="description" content="Stars Speech and Hearing Clinic in Coimbatore offers certified Speech Therapy, Audiology, Occupational Therapy, and Special Education under expert clinical directors." />
-        <link rel="canonical" href="https://starsspeechhearing.com/" />
+        <title>Stars Speech | Stars Speech and Hearing Clinic, Coimbatore</title>
+        <meta name="description" content="Stars Speech and Hearing Clinic is one of the leading Speech Therapy and Hearing Clinics in Coimbatore providing Speech Therapy, Hearing Assessment, Occupational Therapy, Autism Therapy, ADHD Therapy, Early Intervention and Special Education." />
+        <meta name="keywords" content="Stars Speech, Stars Speech Coimbatore, Stars Speech and Hearing Clinic, Speech Therapy Coimbatore, Speech Therapist Coimbatore, Hearing Clinic Coimbatore, Speech and Hearing Clinic, Occupational Therapy, Special Education, Autism Therapy, ADHD Therapy, Early Intervention, Annitha G" />
+        <link rel="canonical" href="https://starsspeechhearing.in/" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Stars Speech and Hearing Clinic" />
+        <meta name="theme-color" content="#0F4C81" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Stars Speech | Stars Speech and Hearing Clinic, Coimbatore" />
+        <meta property="og:description" content="Stars Speech and Hearing Clinic is one of the leading Speech Therapy and Hearing Clinics in Coimbatore providing Speech Therapy, Hearing Assessment, Occupational Therapy, Autism Therapy, ADHD Therapy, Early Intervention and Special Education." />
+        <meta property="og:image" content="https://starsspeechhearing.in/seo/home-banner.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://starsspeechhearing.in/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Stars Speech and Hearing Clinic" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Stars Speech | Stars Speech and Hearing Clinic, Coimbatore" />
+        <meta name="twitter:description" content="Stars Speech and Hearing Clinic is one of the leading Speech Therapy and Hearing Clinics in Coimbatore providing Speech Therapy, Hearing Assessment, Occupational Therapy, Autism Therapy, ADHD Therapy, Early Intervention and Special Education." />
+        <meta name="twitter:image" content="https://starsspeechhearing.in/seo/home-banner.jpg" />
+
+        {/* JSON-LD Schemas */}
+        <script type="application/ld+json">
+          {JSON.stringify(medicalClinicSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(localBusinessSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(websiteSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
       
       {/* SECTION 1 – WELCOME */}
@@ -267,7 +415,7 @@ export const Home = () => {
               className="space-y-4 font-inter text-slate-600 text-sm sm:text-base leading-relaxed"
             >
               <p>
-                At Stars Speech and Hearing Clinic, we are committed to helping children and adults communicate with confidence and reach their full potential. Our experienced team provides evidence-based assessment and therapy services in a caring, supportive, and family-centered environment.
+                At Stars Speech and Hearing Clinic, we are committed to helping children and adults communicate with confidence and reach their full potential. As a leading Speech and Hearing Clinic in Coimbatore, our experienced speech therapists provide evidence-based assessment and therapy services in a caring, supportive, and family-centered environment.
               </p>
               <p>
                 We believe every child and adult deserves the opportunity to communicate, learn, and thrive. Through personalized therapy programs and compassionate care, we empower individuals to achieve meaningful developmental milestones and improve their quality of life.
@@ -321,6 +469,7 @@ export const Home = () => {
                 alt="Stars Speech and Hearing Clinic" 
                 className="w-full aspect-square object-cover rounded-[20px]"
                 loading="eager"
+                decoding="async"
               />
             </div>
           </motion.div>
@@ -338,14 +487,14 @@ export const Home = () => {
               WELCOME TO
             </motion.span>
             
-            <motion.h1 
+            <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-3xl font-poppins font-black text-slate-900 leading-tight px-2"
             >
               Stars Speech and Hearing Clinic
-            </motion.h1>
+            </motion.h2>
           </div>
 
           <motion.div 
@@ -359,6 +508,7 @@ export const Home = () => {
               alt="Stars Speech and Hearing Clinic" 
               className="w-full aspect-[16/10] object-cover rounded-[20px]"
               loading="eager"
+              decoding="async"
             />
           </motion.div>
 
@@ -378,7 +528,7 @@ export const Home = () => {
             className="space-y-4 font-inter text-slate-600 text-sm leading-relaxed px-4"
           >
             <p>
-              At Stars Speech and Hearing Clinic, we are committed to helping children and adults communicate with confidence and reach their full potential. Our experienced team provides evidence-based assessment and therapy services in a caring, supportive, and family-centered environment.
+              At Stars Speech and Hearing Clinic, we are committed to helping children and adults communicate with confidence and reach their full potential. As a leading Speech and Hearing Clinic in Coimbatore, our experienced speech therapists provide evidence-based assessment and therapy services in a caring, supportive, and family-centered environment.
             </p>
             <p>
               We believe every child and adult deserves the opportunity to communicate, learn, and thrive. Through personalized therapy programs and compassionate care, we empower individuals to achieve meaningful developmental milestones and improve their quality of life.
@@ -420,7 +570,7 @@ export const Home = () => {
             </h3>
             <div className="w-10 h-1 bg-gradient-to-r from-blue-500 to-teal-500 mx-auto rounded-full" />
             <p className="font-inter text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-              To become a trusted center of excellence in speech, hearing, and developmental rehabilitation through innovation, compassion, and personalized care.
+              To be the most trusted clinic for speech and hearing care in Coimbatore, advancing pediatric and adult rehabilitation through innovation, compassion, and personalized care at Stars Speech.
             </p>
           </div>
 
@@ -431,7 +581,7 @@ export const Home = () => {
             </h3>
             <div className="w-10 h-1 bg-gradient-to-r from-purple-500 to-teal-500 mx-auto rounded-full" />
             <p className="font-inter text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-              Our mission is to provide compassionate, evidence-based speech, language, hearing, and developmental therapy that empowers children and adults to communicate with confidence and achieve their fullest potential.
+              At Stars Speech and Hearing Clinic, our mission is to provide compassionate, evidence-based speech therapy, audiology checkups, and developmental care that empowers individuals to communicate with confidence.
             </p>
           </div>
         </motion.div>
@@ -463,22 +613,27 @@ export const Home = () => {
             {specializations.map((spec, idx) => {
               const Icon = spec.icon;
               return (
-                <motion.div
+                <Link
                   key={idx}
-                  variants={fadeInUp}
-                  className="bg-white p-8 rounded-[24px] border border-slate-100 shadow-soft hover-lift flex flex-col items-start text-left space-y-4 relative overflow-hidden group"
+                  to={`/services/${spec.slug}`}
+                  className="block h-full group/card cursor-pointer hover:no-underline"
                 >
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-slate-50 to-transparent -z-10 group-hover:scale-110 transition-transform" />
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-tr ${spec.color} flex items-center justify-center shrink-0`}>
-                    <Icon className={`w-7 h-7 ${spec.iconColor}`} />
-                  </div>
-                  <h3 className="text-lg font-poppins font-bold text-slate-900 leading-tight">
-                    {spec.title}
-                  </h3>
-                  <p className="text-sm font-inter text-slate-500 leading-relaxed">
-                    {spec.description}
-                  </p>
-                </motion.div>
+                  <motion.div
+                    variants={fadeInUp}
+                    className="bg-white p-8 rounded-[24px] border border-slate-100 shadow-soft hover-lift flex flex-col items-start text-left space-y-4 relative overflow-hidden group h-full"
+                  >
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-slate-50 to-transparent -z-10 group-hover:scale-110 transition-transform" />
+                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-tr ${spec.color} flex items-center justify-center shrink-0`}>
+                      <Icon className={`w-7 h-7 ${spec.iconColor}`} />
+                    </div>
+                    <h3 className="text-lg font-poppins font-bold text-slate-900 leading-tight group-hover/card:text-primary transition-colors">
+                      {spec.title}
+                    </h3>
+                    <p className="text-sm font-inter text-slate-500 leading-relaxed">
+                      {spec.description}
+                    </p>
+                  </motion.div>
+                </Link>
               );
             })}
           </motion.div>
@@ -510,6 +665,7 @@ export const Home = () => {
                 alt="Speech therapy session with therapist and child"
                 className="w-full h-auto block"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             
@@ -533,6 +689,12 @@ export const Home = () => {
                   <span className="font-poppins font-semibold text-sm">{bullet}</span>
                 </div>
               ))}
+            </div>
+
+            <div className="pt-4 border-t border-slate-100/50">
+              <Link to="/services/speech-therapy" className="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors">
+                Learn more about our Speech Therapy programs &rarr;
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -562,6 +724,7 @@ export const Home = () => {
               alt="Special education student learning with developmental guidance"
               className="w-full h-full object-cover"
               loading="lazy"
+              decoding="async"
             />
           </div>
           
@@ -581,6 +744,12 @@ export const Home = () => {
                 <span className="font-poppins font-semibold text-sm">{bullet}</span>
               </div>
             ))}
+          </div>
+
+          <div className="pt-4 border-t border-slate-100/50">
+            <Link to="/services/special-education" className="inline-flex items-center text-sm font-bold text-purple-600 hover:text-purple-800 transition-colors">
+              Learn more about our Special Education services &rarr;
+            </Link>
           </div>
         </motion.div>
       </section>
@@ -610,12 +779,19 @@ export const Home = () => {
                 alt="Occupational therapy child exercises"
                 className="w-full h-full object-cover"
                 loading="lazy"
+                decoding="async"
               />
             </div>
 
             <p className="font-inter text-slate-600 text-base sm:text-lg leading-relaxed">
               Occupational therapy focuses on improving child and adult functional independence in daily tasks. Our child-friendly therapy center provides sensory integration training, fine motor muscle development, hand-eye coordination games, and training for daily self-care tasks. This structured approach helps children reduce sensory aversion, play more cooperatively, and build essential life skills.
             </p>
+
+            <div className="pt-4 border-t border-slate-100/50">
+              <Link to="/services/occupational-therapy" className="inline-flex items-center text-sm font-bold text-teal-600 hover:text-teal-800 transition-colors">
+                Learn more about our Occupational Therapy Gym &rarr;
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -644,12 +820,19 @@ export const Home = () => {
               alt="World-Class Hearing Aid Solutions for Hearing Loss"
               className="w-full h-auto block"
               loading="lazy"
+              decoding="async"
             />
           </div>
 
           <p className="font-inter text-slate-600 text-base sm:text-lg leading-relaxed">
             We provide state-of-the-art, digital hearing aid technologies tailored to individual hearing needs. Our certified audiologists conduct precise assessments and offer personalized fittings for advanced, virtually invisible hearing solutions. By utilizing cutting-edge noise reduction, Bluetooth connectivity, and rechargeability features, we restore clarity, improve speech understanding, and enrich your quality of life.
           </p>
+
+          <div className="pt-4 border-t border-slate-100/50">
+            <Link to="/services/hearing-aid-fitting" className="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors">
+              Explore our Digital Hearing Aid Fitting services &rarr;
+            </Link>
+          </div>
         </motion.div>
       </section>
 
@@ -678,6 +861,7 @@ export const Home = () => {
                 alt="Children playing together and building developmental skills"
                 className="w-full h-full object-cover"
                 loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -725,6 +909,7 @@ export const Home = () => {
                         alt={item.title} 
                         className="w-full h-full object-contain rounded-2xl"
                         loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   )}

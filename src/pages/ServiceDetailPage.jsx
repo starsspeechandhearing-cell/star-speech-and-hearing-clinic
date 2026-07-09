@@ -31,6 +31,9 @@ export const ServiceDetailPage = () => {
     "provider": {
       "@type": "MedicalClinic",
       "name": "Stars Speech and Hearing Clinic",
+      "url": "https://starsspeechhearing.in",
+      "logo": "https://starsspeechhearing.in/images/logo.png",
+      "image": "https://starsspeechhearing.in/seo/home-banner.jpg",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "34/176- A, Raju Naidu St, Sivananda Colony, Tatabad",
@@ -42,25 +45,101 @@ export const ServiceDetailPage = () => {
     }
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://starsspeechhearing.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://starsspeechhearing.in/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": service.title,
+        "item": `https://starsspeechhearing.in/services/${service.slug}`
+      }
+    ]
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": service.title,
+    "description": service.summary,
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "Stars Speech and Hearing Clinic",
+      "url": "https://starsspeechhearing.in",
+      "logo": "https://starsspeechhearing.in/images/logo.png",
+      "image": "https://starsspeechhearing.in/seo/home-banner.jpg"
+    }
+  };
+
+  const faqSchema = service.faqs && service.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": service.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  } : null;
+
   return (
     <div className="overflow-hidden">
       {/* Helmet SEO */}
       <Helmet>
-        <title>{service.metaTitle}</title>
+        <title>{`${service.title} | Stars Speech and Hearing Clinic`}</title>
         <meta name="description" content={service.metaDescription} />
-        <link rel="canonical" href={`https://starsspeechhearing.com/services/${service.slug}`} />
+        <meta name="keywords" content={`${service.title}, ${service.category}, Stars Speech, Stars Speech Coimbatore, Stars Speech and Hearing Clinic, Coimbatore`} />
+        <link rel="canonical" href={`https://starsspeechhearing.in/services/${service.slug}`} />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Stars Speech and Hearing Clinic" />
+        <meta name="theme-color" content="#0F4C81" />
         
         {/* Open Graph */}
         <meta property="og:title" content={service.metaTitle} />
         <meta property="og:description" content={service.metaDescription} />
-        <meta property="og:image" content={service.heroImage} />
-        <meta property="og:url" content={`https://starsspeechhearing.com/services/${service.slug}`} />
-        <meta property="og:type" content="article" />
+        <meta property="og:image" content={service.heroImage.startsWith('/') ? `https://starsspeechhearing.in${service.heroImage}` : service.heroImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content={`https://starsspeechhearing.in/services/${service.slug}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Stars Speech and Hearing Clinic" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={service.metaTitle} />
+        <meta name="twitter:description" content={service.metaDescription} />
+        <meta name="twitter:image" content={service.heroImage.startsWith('/') ? `https://starsspeechhearing.in${service.heroImage}` : service.heroImage} />
         
         {/* Schema Markup */}
         <script type="application/ld+json">
           {JSON.stringify(jsonLdSchema)}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        {faqSchema && (
+          <script type="application/ld+json">
+            {JSON.stringify(faqSchema)}
+          </script>
+        )}
       </Helmet>
 
       {/* 1. HERO BANNER */}

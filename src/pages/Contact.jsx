@@ -111,12 +111,83 @@ export const Contact = () => {
     }
   ];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://starsspeechhearing.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://starsspeechhearing.in/contact"
+      }
+    ]
+  };
+
+  const contactPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Stars Speech and Hearing Clinic | Coimbatore",
+    "description": "Contact Stars Speech and Hearing Clinic to book appointments for speech therapy, hearing assessment, occupational therapy, and special education services.",
+    "url": "https://starsspeechhearing.in/contact"
+  };
+
+  const faqPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": contactFaqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  };
+
   return (
     <div className="overflow-hidden bg-[#F8FCFF] text-slate-800">
       <Helmet>
-        <title>Contact Us | Stars Speech and Hearing Clinic Coimbatore</title>
-        <meta name="description" content="Get in touch with Stars Speech and Hearing Clinic in Sivananda Colony, Coimbatore. Book an appointment or consult on speech therapy, hearing aids, and occupational therapy." />
-        <link rel="canonical" href="https://starsspeechhearing.com/contact" />
+        <title>Contact Stars Speech and Hearing Clinic | Coimbatore</title>
+        <meta name="description" content="Contact Stars Speech and Hearing Clinic to book appointments for speech therapy, hearing assessment, occupational therapy, and special education services." />
+        <meta name="keywords" content="contact Stars Speech and Hearing Clinic, appointment speech therapy Coimbatore, audiology appointment, Coimbatore clinic address" />
+        <link rel="canonical" href="https://starsspeechhearing.in/contact" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Stars Speech and Hearing Clinic" />
+        <meta name="theme-color" content="#0F4C81" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Contact Stars Speech and Hearing Clinic | Coimbatore" />
+        <meta property="og:description" content="Contact Stars Speech and Hearing Clinic to book appointments for speech therapy, hearing assessment, occupational therapy, and special education services." />
+        <meta property="og:image" content="https://starsspeechhearing.in/seo/home-banner.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://starsspeechhearing.in/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Stars Speech and Hearing Clinic" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Stars Speech and Hearing Clinic | Coimbatore" />
+        <meta name="twitter:description" content="Contact Stars Speech and Hearing Clinic to book appointments for speech therapy, hearing assessment, occupational therapy, and special education services." />
+        <meta name="twitter:image" content="https://starsspeechhearing.in/seo/home-banner.jpg" />
+
+        {/* JSON-LD Schemas */}
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(contactPageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqPageSchema)}
+        </script>
       </Helmet>
       
       {/* ──────────────────────────────────────────────────────────── */}

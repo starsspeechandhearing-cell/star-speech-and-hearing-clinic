@@ -262,12 +262,73 @@ const therapySteps = [
 // MAIN COMPONENT
 // ═══════════════════════════════════════════════════════════════════
 export const Services = () => {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://starsspeechhearing.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://starsspeechhearing.in/services"
+      }
+    ]
+  };
+
+  const servicePageSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Speech Therapy & Hearing Services",
+    "description": "Explore speech therapy, occupational therapy, special education, hearing assessment, cochlear implant mapping, ASD intervention, ADHD support, early intervention, remedial therapy, and more.",
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "Stars Speech and Hearing Clinic",
+      "url": "https://starsspeechhearing.in",
+      "logo": "https://starsspeechhearing.in/images/logo.png",
+      "image": "https://starsspeechhearing.in/seo/home-banner.jpg"
+    }
+  };
+
   return (
     <div className="overflow-hidden">
       <Helmet>
-        <title>Therapy Services &amp; Audiology | Stars Clinic Coimbatore</title>
-        <meta name="description" content="Explore 20+ expert clinical services in Coimbatore including Speech Therapy, Hearing Aid trials, CI Mapping, Occupational Therapy, Special Education, and ADHD support." />
-        <link rel="canonical" href="https://starsspeechhearing.com/services" />
+        <title>Speech Therapy & Hearing Services | Stars Speech and Hearing Clinic</title>
+        <meta name="description" content="Explore speech therapy, occupational therapy, special education, hearing assessment, cochlear implant mapping, ASD intervention, ADHD support, early intervention, remedial therapy, and more." />
+        <meta name="keywords" content="speech therapy, hearing services, audiology, occupational therapy, special education, cochlear implant mapping, Coimbatore, stars speech and hearing clinic" />
+        <link rel="canonical" href="https://starsspeechhearing.in/services" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Stars Speech and Hearing Clinic" />
+        <meta name="theme-color" content="#0F4C81" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Speech Therapy & Hearing Services | Stars Speech and Hearing Clinic" />
+        <meta property="og:description" content="Explore speech therapy, occupational therapy, special education, hearing assessment, cochlear implant mapping, ASD intervention, ADHD support, early intervention, remedial therapy, and more." />
+        <meta property="og:image" content="https://starsspeechhearing.in/seo/home-banner.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://starsspeechhearing.in/services" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Stars Speech and Hearing Clinic" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Speech Therapy & Hearing Services | Stars Speech and Hearing Clinic" />
+        <meta name="twitter:description" content="Explore speech therapy, occupational therapy, special education, hearing assessment, cochlear implant mapping, ASD intervention, ADHD support, early intervention, remedial therapy, and more." />
+        <meta name="twitter:image" content="https://starsspeechhearing.in/seo/home-banner.jpg" />
+
+        {/* JSON-LD Schemas */}
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(servicePageSchema)}
+        </script>
       </Helmet>
 
       {/* ──────────────────────────────────────────────────────────── */}
