@@ -50,7 +50,7 @@ export const Navbar = () => {
             </span>
           </div>
           <div className="flex items-center text-[15px] font-medium">
-            <a href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%2520and%2520Hearing%2520Clinic,%20I%20would%20like%20to%2520schedule%20an%20appointment." target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-success-green transition-all duration-300 hover:translate-y-[-1px] text-white font-semibold group">
+            <a href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%20and%20Hearing%20Clinic,%20I%20would%20like%20to%20schedule%20an%20appointment." target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-success-green transition-all duration-300 hover:translate-y-[-1px] text-white font-semibold group">
               <MessageCircle className="w-[18px] h-[18px] mr-2 text-success-green group-hover:scale-110 transition-all duration-300" />
               WhatsApp Chat
             </a>
@@ -103,7 +103,7 @@ export const Navbar = () => {
           <div className="hidden lg:block">
             <Button
               variant="teal"
-              href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%2520and%2520Hearing%2520Clinic,%20I%20would%20like%20to%2520schedule%20an%20appointment."
+              href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%20and%20Hearing%20Clinic,%20I%20would%20like%20to%20schedule%20an%20appointment."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -153,7 +153,7 @@ export const Navbar = () => {
                   <Button
                     variant="teal"
                     className="w-full justify-center text-center"
-                    href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%2520and%2520Hearing%2520Clinic,%20I%20would%20like%20to%2520schedule%20an%20appointment."
+                    href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%20and%20Hearing%20Clinic,%20I%20would%20like%20to%20schedule%20an%20appointment."
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsOpen(false)}

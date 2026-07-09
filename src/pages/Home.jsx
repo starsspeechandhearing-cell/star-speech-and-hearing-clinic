@@ -430,7 +430,7 @@ export const Home = () => {
             >
               <Button
                 variant="teal"
-                href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%2520and%2520Hearing%2520Clinic,%20I%20would%20like%20to%2520schedule%20an%20appointment."
+                href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%20and%20Hearing%20Clinic,%20I%20would%20like%20to%20schedule%20an%20appointment."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#25D366] hover:bg-[#20ba5a] text-white border-0 font-bold px-8 py-4 text-base rounded-full shadow-lg shadow-green-500/20 hover:shadow-green-500/30 flex items-center space-x-2 gap-2"
@@ -543,7 +543,7 @@ export const Home = () => {
           >
             <Button
               variant="teal"
-              href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%2520and%2520Hearing%2520Clinic,%20I%20would%20like%20to%2520schedule%20an%20appointment."
+              href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%20and%20Hearing%20Clinic,%20I%20would%20like%20to%20schedule%20an%20appointment."
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#25D366] hover:bg-[#20ba5a] text-white border-0 font-bold px-8 py-4 text-base rounded-full shadow-lg shadow-green-500/20 hover:shadow-green-500/30 flex items-center space-x-2 gap-2"

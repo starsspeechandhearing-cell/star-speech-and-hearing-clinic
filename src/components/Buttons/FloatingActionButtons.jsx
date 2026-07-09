@@ -38,7 +38,7 @@ export const FloatingActionButtons = () => {
 
       {/* WhatsApp Button */}
       <motion.a
-        href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%2520and%2520Hearing%2520Clinic,%20I%20would%20like%20to%2520schedule%20an%20appointment."
+        href="https://wa.me/919080515327?text=Hi%20Stars%20Speech%20and%20Hearing%20Clinic,%20I%20would%20like%20to%20schedule%20an%20appointment."
         target="_blank"
         rel="noopener noreferrer"
         whileHover={{ scale: 1.1 }}
