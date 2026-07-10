@@ -188,10 +188,16 @@ export const About = () => {
     "name": "About Annitha G | Stars Speech and Hearing Clinic",
     "description": "Meet Annitha G, Speech-Language Pathologist and Founder of Stars Speech and Hearing Clinic, providing evidence-based speech, language, hearing, and developmental therapy in Coimbatore.",
     "url": "https://starsspeechhearing.in/about",
+    "image": "https://starsspeechhearing.in/seo/annitha-founder.jpeg",
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": "https://starsspeechhearing.in/seo/annitha-founder.jpeg"
+    },
     "mainEntity": {
       "@type": "Person",
       "name": "Annitha G",
       "jobTitle": "Speech-Language Pathologist & Founder",
+      "image": "https://starsspeechhearing.in/seo/annitha-founder.jpeg",
       "worksFor": {
         "@type": "MedicalClinic",
         "name": "Stars Speech and Hearing Clinic",
@@ -216,7 +222,7 @@ export const About = () => {
         {/* Open Graph */}
         <meta property="og:title" content="About Annitha G | Stars Speech and Hearing Clinic" />
         <meta property="og:description" content="Meet Annitha G, Speech-Language Pathologist and Founder of Stars Speech and Hearing Clinic, providing evidence-based speech, language, hearing, and developmental therapy in Coimbatore." />
-        <meta property="og:image" content="https://starsspeechhearing.in/seo/home-banner.jpg" />
+        <meta property="og:image" content="https://starsspeechhearing.in/seo/annitha-founder.jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:url" content="https://starsspeechhearing.in/about" />
@@ -227,7 +233,7 @@ export const About = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About Annitha G | Stars Speech and Hearing Clinic" />
         <meta name="twitter:description" content="Meet Annitha G, Speech-Language Pathologist and Founder of Stars Speech and Hearing Clinic, providing evidence-based speech, language, hearing, and developmental therapy in Coimbatore." />
-        <meta name="twitter:image" content="https://starsspeechhearing.in/seo/home-banner.jpg" />
+        <meta name="twitter:image" content="https://starsspeechhearing.in/seo/annitha-founder.jpeg" />
 
         {/* JSON-LD Schemas */}
         <script type="application/ld+json">

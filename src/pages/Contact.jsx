@@ -107,7 +107,7 @@ export const Contact = () => {
     },
     {
       q: 'How long does therapy usually take?',
-      a: 'The duration of therapy varies based on the type and severity of the condition. Typically, therapy sessions are scheduled 2 to 3 times a week, and progress is reviewed every 3 months.'
+      a: 'The duration of therapy varies based on the type and severity of the condition. Some clients see progress in 3 - 6 months, others need long-term support. We will review progress every month.'
     }
   ];
 

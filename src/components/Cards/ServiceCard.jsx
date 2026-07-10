@@ -12,19 +12,12 @@ export const ServiceCard = ({ service }) => {
       transition={{ duration: 0.5 }}
       className="bg-white rounded-custom overflow-hidden border border-slate-100 shadow-soft hover-lift flex flex-col h-full"
     >
-      <div className="relative overflow-hidden h-48 group">
-        <img
-          src={service.heroImage}
-          alt={`${service.title} - Stars Speech and Hearing Clinic`}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-          loading="lazy"
-          decoding="async"
-        />
-        <div className="absolute top-4 left-4 bg-primary/95 backdrop-blur-xs text-white font-poppins text-[10px] uppercase tracking-wider font-bold px-3 py-1.5 rounded-full">
-          {service.category}
-        </div>
-      </div>
       <div className="p-6 flex flex-col flex-grow">
+        <div className="mb-4">
+          <span className="bg-blue-50 text-blue-600 font-poppins text-[10px] uppercase tracking-wider font-bold px-3 py-1.5 rounded-full">
+            {service.category}
+          </span>
+        </div>
         <h3 className="font-poppins font-bold text-lg text-[#1E293B] mb-2 line-clamp-1">
           {service.title}
         </h3>
